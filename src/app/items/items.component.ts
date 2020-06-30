@@ -8,14 +8,11 @@ import { ItemsService } from '../items.service';
 })
 export class ItemsComponent implements OnInit{
   listItems:string[];
-  constructor() {
-    let service = new ItemsService();
-    this.listItems = service.getItems();
+  constructor(private service:ItemsService) {
+    this.listItems = this.service.getItems();
    }
 
   ngOnInit(): void {
   }
-
-
 
 }
