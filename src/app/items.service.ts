@@ -13,14 +13,17 @@ export class ItemsService {
   getCompleted(){
     return this.completed;
   }
-  removeItem(id){
+  deleteItem(id:string){
     this.data.splice(this.data.indexOf(id), 1);
   }
-  addItem(id){
+  addItem(id:string){
     this.data.push(id);
   }
-  completeItem(id){
-    removeItem(this.data);
+  completeItem(id:string){
+    this.deleteItem(id);
     this.completed.unshift(id);
+  }
+  editItem(id:string, change:string){
+    this.data.splice(this.data.indexOf(id), 1, change);
   }
 }
