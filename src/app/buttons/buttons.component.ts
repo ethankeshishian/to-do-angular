@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ItemsService } from '../items.service';
 
 @Component({
   selector: 'actions',
