@@ -8,13 +8,13 @@ import { ItemsService } from '../items.service';
 })
 export class CompletedComponent implements OnInit {
   completedItems;
-   uncompleteItem(id:string){
+   uncompleteItem(id){
      this.service.uncompleteItem(id);
    }
-   deleteItem(id:string){
+   deleteItem(id){
      this.service.deleteCompletedItem(id);
    }
-   
+
    constructor(private service:ItemsService) {
      this.completedItems = this.service.getCompleted();
     }

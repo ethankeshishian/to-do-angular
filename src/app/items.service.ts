@@ -17,22 +17,24 @@ export class ItemsService {
   getMarked(){
     return this.marked;
   }
-  deleteItem(id:string){
-    this.data.splice(this.data.indexOf(id), 1);
+  deleteItem(id){
+    this.data.splice(id, 1);
   }
-  deleteCompletedItem(id:string){
-    this.completed.splice(this.completed.indexOf(id), 1);
+  deleteCompletedItem(id){
+    this.completed.splice(id, 1);
   }
   addItem(id:string){
     this.data.push(id);
   }
-  completeItem(id:string){
-    this.completed.unshift(id);
+  completeItem(id){
+    let val = this.data[id];
+    this.completed.unshift(val);
     this.deleteItem(id);
     //this.marked.splice(this.marked.indexOf(id), 1)
   }
-  uncompleteItem(id:string){
-    this.data.push(id);
+  uncompleteItem(id){
+    let val = this.completed[id];
+    this.completed.push(val);
     this.deleteCompletedItem(id);
   }
 

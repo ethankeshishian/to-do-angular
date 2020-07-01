@@ -2,8 +2,8 @@
 <button type="add" name="button" (click)="addItem()" >Add</button>
 <ul class="items">
   <li *ngFor="let item of listItems, let i = index">
-    <input type="checkbox" name = "Item {{item}}" (click)='completeItem(item)'>
+    <input type="checkbox" name = "Item {{item}}" (click)='completeItem(i)'>
     {{item}}
-    <button type="delete" name="button" (click)="deleteItem(item)">Delete</button>
+    <button type="delete" name="button" (click)="deleteItem(i)">Delete</button>
   </li>
 </ul>

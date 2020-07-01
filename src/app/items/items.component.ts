@@ -9,14 +9,14 @@ import { ItemsService } from '../items.service';
 export class ItemsComponent implements OnInit{
   listItems:string[];
   newItem;
-  completeItem(id:string){
+  completeItem(id){
     this.service.completeItem(id);
   }
   addItem(){
     this.service.addItem(this.newItem);
     this.newItem = "";
   }
-  deleteItem(id:string){
+  deleteItem(id){
     this.service.deleteItem(id);
   }
   constructor(private service:ItemsService) {
