@@ -16,6 +16,9 @@ export class ItemsComponent implements OnInit{
     this.service.addItem(this.newItem);
     this.newItem = "";
   }
+  deleteItem(id:string){
+    this.service.deleteItem(id);
+  }
   constructor(private service:ItemsService) {
     this.listItems = this.service.getItems();
    }

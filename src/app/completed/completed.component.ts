@@ -8,14 +8,16 @@ import { ItemsService } from '../items.service';
 })
 export class CompletedComponent implements OnInit {
   completedItems;
-  constructor(private service:ItemsService) {
-    this.completedItems = this.service.getCompleted();
-   }
-
    uncompleteItem(id:string){
      this.service.uncompleteItem(id);
    }
-
+   deleteItem(id:string){
+     this.service.deleteCompletedItem(id);
+   }
+   
+   constructor(private service:ItemsService) {
+     this.completedItems = this.service.getCompleted();
+    }
   ngOnInit(): void {
   }
 

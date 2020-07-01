@@ -4,5 +4,6 @@
   <li *ngFor="let item of listItems, let i = index">
     <input type="checkbox" name = "Item {{item}}" (click)='completeItem(item)'>
     {{item}}
+    <button type="delete" name="button" (click)="deleteItem(item)">Delete</button>
   </li>
 </ul>
