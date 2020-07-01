@@ -10,7 +10,7 @@ export class ButtonsComponent implements OnInit {
   markedItems;
   constructor(private service:ItemsService) {
     this.markedItems = this.service.getMarked();
-   }
+  }
 
   ngOnInit(): void {
   }

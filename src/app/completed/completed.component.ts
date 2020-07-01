@@ -12,6 +12,10 @@ export class CompletedComponent implements OnInit {
     this.completedItems = this.service.getCompleted();
    }
 
+   uncompleteItem(id:string){
+     this.service.uncompleteItem(id);
+   }
+
   ngOnInit(): void {
   }
 

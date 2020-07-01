@@ -9,8 +9,8 @@ import { ItemsService } from '../items.service';
 export class ItemsComponent implements OnInit{
   listItems:string[];
   newItem;
-  markItem(id:string){
-    this.service.addMark(id);
+  completeItem(id:string){
+    this.service.completeItem(id);
   }
   addItem(){
     this.service.addItem(this.newItem);
