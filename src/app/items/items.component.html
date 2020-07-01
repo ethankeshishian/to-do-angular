@@ -1,5 +1,8 @@
+<input type="text" name="Add" placeholder="Add a task..." [(ngModel)]="newItem">
+<button type="add" name="button" (click)="addItem()" >Add</button>
 <ul class="items">
-  <li *ngFor="let item of listItems">
+  <li *ngFor="let item of listItems, let i = index">
+    <input type="checkbox" name = "Item {{item}}" (click)='markItem(this.innertext)'> <!-- "this.innertext" doesn't work! -->
     {{item}}
   </li>
 </ul>

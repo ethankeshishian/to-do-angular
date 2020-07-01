@@ -6,12 +6,16 @@ import { Injectable } from '@angular/core';
 export class ItemsService {
   data = ["1", "2", "3"];
   completed = ["done"];
+  marked = [];//temp
   constructor() { }
   getItems(){
     return this.data;
   }
   getCompleted(){
     return this.completed;
+  }
+  getMarked(){
+    return this.marked;
   }
   deleteItem(id:string){
     this.data.splice(this.data.indexOf(id), 1);
@@ -20,10 +24,15 @@ export class ItemsService {
     this.data.push(id);
   }
   completeItem(id:string){
-    this.deleteItem(id);
     this.completed.unshift(id);
+    this.deleteItem(id);
+
+    this.marked.splice(this.marked.indexOf(id), 1)
   }
   editItem(id:string, change:string){
     this.data.splice(this.data.indexOf(id), 1, change);
+  }
+  addMark(id:string){
+    this.marked.push(id);
   }
 }

@@ -7,7 +7,7 @@ import { ItemsService } from '../items.service';
   styleUrls: ['./completed.component.css']
 })
 export class CompletedComponent implements OnInit {
-  completedItems:string[];
+  completedItems;
   constructor(private service:ItemsService) {
     this.completedItems = this.service.getCompleted();
    }
