@@ -2,7 +2,7 @@
 <button type="add" name="button" (click)="addItem()" >Add</button>
 <ul class="items">
   <li *ngFor="let item of listItems, let i = index">
-    <input type="checkbox" name = "Item {{item}}" (click)='markItem(this.innertext)'> <!-- "this.innertext" doesn't work! -->
+    <input type="checkbox" name = "Item {{item}}" (click)='markItem(item)'> <!-- "this.innertext" doesn't work! -->
     {{item}}
   </li>
 </ul>
