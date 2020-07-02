@@ -1,7 +1,7 @@
 <ul>
   <li *ngFor="let item of completedItems | async, let i = index">
     <input type="checkbox" name="completed {{item}}" (click)='uncompleteItem(item.val, item.key)' checked>
-    <s>{{item.val | json}}</s>
+    <s>{{item.val}}</s>
     <button type="delete" name="button" (click)="deleteItem(item.key)">Delete</button>
   </li>
 </ul>
