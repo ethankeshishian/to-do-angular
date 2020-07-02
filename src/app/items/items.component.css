@@ -8,6 +8,21 @@
   float: left;
   padding:20px;
 }
+/* Handles each list element */
+/* .markItem{
+  display: table-cell;
+  white-space: nowrap;
+} */
+/* .content{
+  display: table-cell;
+  width: 100%;
+  white-space: nowrap;
+}  */
+/* .delete{
+  display: table-cell;
+  white-space: nowrap;
+} */
+
 /* .addTask{
   align-items:
 } */
