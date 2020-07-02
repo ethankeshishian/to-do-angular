@@ -1,0 +1,13 @@
+#completedItem {
+  text-decoration: line-through;
+}
+.completedItems {
+  list-style: none;
+}
+div {
+  margin-left: 620px;
+  padding: 20px;
+}
+/* #clear{
+  float:right;
+} */

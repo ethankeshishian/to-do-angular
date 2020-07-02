@@ -51,7 +51,9 @@ export class ItemsService {
     this.data.push(id);
     this.deleteCompletedItem(key);
   }
-
+  clearAll(){
+    this.completed.remove();
+  }
   // Future features
   // editItem(id:string, change:string){
   //   this.data.splice(this.data.indexOf(id), 1, change);

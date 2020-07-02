@@ -21,4 +21,7 @@ export class CompletedComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  clearAll(){
+    this.service.clearAll();
+  }
 }
