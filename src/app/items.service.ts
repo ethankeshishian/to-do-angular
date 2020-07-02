@@ -20,8 +20,10 @@ export class ItemsService {
   constructor(db: AngularFireDatabase) {
     this.data = db.list('List');
     this.completed = db.list('Completed');
-    this.data$ = this.data.snapshotChanges().pipe(map(changes => changes.map(c => ({ key: c.payload.key, val: c.payload.val()}))))
-    this.completed$ = this.completed.snapshotChanges().pipe(map(changes => changes.map(c => ({ key: c.payload.key, val: c.payload.val()}))))
+    this.data.snapshotChanges().pipe(map(changes => console.log(changes)))
+
+    this.data$ = this.data.snapshotChanges().pipe(map((changes:any) => changes.map(c => ({ key: c.payload.key, val: c.payload.val()}))))
+    this.completed$ = this.completed.snapshotChanges().pipe(map((changes:any) => changes.map(c => ({ key: c.payload.key, val: c.payload.val()}))))
   }
   getItems(){
     return this.data$;
