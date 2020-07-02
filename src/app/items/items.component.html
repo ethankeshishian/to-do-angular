@@ -2,7 +2,7 @@
 <button type="add" name="button" (click)="addItem()" >Add</button>
 <ul class="items">
   <li *ngFor="let item of listItems | async, let i = index">
-    <input type="checkbox" name = "Item {{item}}" (click)='completeItem(item, item.key)'>
+    <input type="checkbox" name = "Item {{item}}" (click)='completeItem(item.val, item.key)'>
     {{item.val | json}}
     <button type="delete" name="button" (click)="deleteItem(item.key)">Delete</button>
   </li>
