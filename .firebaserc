@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "todo-deae7": {
+      "hosting": {
+        "ToDo": [
+          "todo-deae7"
+        ]
+      }
+    }
+  }
+}
