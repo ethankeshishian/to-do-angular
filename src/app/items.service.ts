@@ -34,7 +34,7 @@ export class ItemsService {
   }
   uncompleteItem(id){
     let val = this.completed[id];
-    this.completed.push(val);
+    this.data.push(val);
     this.deleteCompletedItem(id);
   }
 

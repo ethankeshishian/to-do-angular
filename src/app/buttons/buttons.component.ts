@@ -10,14 +10,14 @@ export class ButtonsComponent implements OnInit {
   markedItems;
   constructor(private service:ItemsService) {
     this.markedItems = this.service.getMarked();
-  }
+   }
 
   ngOnInit(): void {
   }
   completeItem(){
     let len = this.markedItems.length;
     for (let i = 0; i < len; i++){
-      this.service.completeItem(this.markedItems[0]);
+      this.service.completeItem(this.markedItems[i]);
     }
   }
 }
