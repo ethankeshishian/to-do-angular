@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 // import {AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 //import { AngularFirestore } from '@angular/fire/firestore'
 //import { Observable}
+import { AngularFireDatabase } from '@angular/fire/database';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +12,11 @@ export class ItemsService {
   data = ["1", "2", "3"];
   completed = ["done"];
   marked = [];//temp
-  constructor() { }
+  constructor(){};
+//   data: Observable<any[]>;
+//   constructor(db: AngularFireDatabase) {
+//   this.data = db.list('List').valueChanges();
+// }
   getItems(){
     return this.data;
   }
