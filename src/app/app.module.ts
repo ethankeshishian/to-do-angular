@@ -9,6 +9,11 @@ import { ItemsService } from './items.service';
 import { CompletedComponent } from './completed/completed.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +24,9 @@ import { ButtonsComponent } from './buttons/buttons.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [ItemsService],
   bootstrap: [AppComponent]
