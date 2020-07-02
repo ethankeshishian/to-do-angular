@@ -9,6 +9,13 @@
   margin-left: 620px;
   padding: 20px;
 }
+h2 {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  /* text-align: center; */
+}
+tr:hover {
+  background-color: #DCDCDC;
+}
 /* Handles each list element */
 /* .markItem{
   display: table-cell;
@@ -17,11 +24,12 @@
 .content{
   display: table-cell;
   width: 100%;
-}
-.delete{
-  display: table-cell;
-  white-space: nowrap;
 } */
+.delete{
+ /* display: table-cell;
+  white-space: nowrap; */
+  cursor:pointer;
+}
 
 /* #clear{
   float:right;

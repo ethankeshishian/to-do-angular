@@ -2,9 +2,10 @@ h1 {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   /* text-align: center; */
   padding: 20px;
+  /* text-align: center; */
 }
 /* Navigation bar */
-.navbar {
+/* .navbar {
   width: 100%;
   background-color: #555555;
   overflow: auto;
@@ -23,7 +24,7 @@ h1 {
 }
 .active {
   background-color: #F3DFC1;
-}
+} */
 /* footer */
 /* .footer {
   position: fixed;

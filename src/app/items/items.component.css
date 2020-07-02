@@ -8,6 +8,14 @@
   float: left;
   padding:20px;
 }
+h2 {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  /* text-align: center; */
+}
+tr:hover {
+  background-color: #DCDCDC;
+}
+
 /* Handles each list element */
 /* .markItem{
   display: table-cell;
@@ -18,10 +26,11 @@
   width: 100%;
   white-space: nowrap;
 }  */
-/* .delete{
-  display: table-cell;
-  white-space: nowrap;
-} */
+.delete{
+  /* display: table-cell;
+  white-space: nowrap; */
+  cursor:pointer;
+}
 
 /* .addTask{
   align-items:
