@@ -1,4 +1,4 @@
-<div>
+<div class="Block">
   <h2>In Progress</h2>
   <ul class="items">
     <li *ngFor="let item of listItems | async, let i = index">
@@ -10,8 +10,11 @@
         <path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
       </svg>
       <!-- <button type="delete" name="button" (click)="deleteItem(item.key)">Delete</button> -->
+      <hr>
     </li>
   </ul>
-  <input type="text" name="Add" placeholder="Add a task..." [(ngModel)]="newItem"(keydown.enter)="addItem()">
-  <button type="add" name="button" (click)="addItem()" >Add</button>
+  <div class="addTask">
+    <input type="text" name="Add" placeholder="Add a task..." [(ngModel)]="newItem"(keydown.enter)="addItem()">
+    <button type="add" name="button" (click)="addItem()" >Add</button>
+  </div>
 </div>

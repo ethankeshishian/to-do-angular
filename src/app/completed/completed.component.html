@@ -1,4 +1,4 @@
-<div>
+<div class="Block">
   <h2>Completed</h2>
   <ul class="completedItems">
     <li id="completedItem" *ngFor="let item of completedItems | async, let i = index">
@@ -10,6 +10,7 @@
         <path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/>
       </svg>
       <!-- <button type="delete" name="button" (click)="deleteItem(item.key)">Delete</button> -->
+      <hr>
     </li>
   </ul>
   <button id="clear" name="button" (click)="clearAll()">Clear</button>

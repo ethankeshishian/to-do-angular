@@ -3,8 +3,9 @@
 }
 .completedItems {
   list-style: none;
+  padding:0;
 }
-div {
+.Block {
   margin-left: 620px;
   padding: 20px;
 }
