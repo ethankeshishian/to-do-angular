@@ -7,10 +7,10 @@ import { ItemsService } from '../items.service';
   styleUrls: ['./items.component.css']
 })
 export class ItemsComponent implements OnInit{
-  listItems:string[];
+  listItems;
   newItem;
-  completeItem(id){
-    this.service.completeItem(id);
+  completeItem(id, key){
+    this.service.completeItem(id, key);
   }
   addItem(){
     this.service.addItem(this.newItem);
@@ -19,6 +19,7 @@ export class ItemsComponent implements OnInit{
   deleteItem(id){
     this.service.deleteItem(id);
   }
+  
   constructor(private service:ItemsService) {
     this.listItems = this.service.getItems();
    }
