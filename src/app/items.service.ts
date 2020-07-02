@@ -12,12 +12,8 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ItemsService {
-  //data = ["1", "2", "3"];
   data;
-  //completed = ["done"];
   completed;
-  //marked = [];//temp
-  //constructor(){};
   data$: Observable<any[]>;
   completed$: Observable<any[]>;
   constructor(db: AngularFireDatabase) {
@@ -44,13 +40,11 @@ export class ItemsService {
     this.data.push(id);
   }
   completeItem(id, key){
-    //let val = this.data$[id];
     this.completed.push(id);//unshift
     this.deleteItem(key);
-    //this.marked.splice(this.marked.indexOf(id), 1)
+    //this.marked.splice(this.marked.indexOf(id), 1), similar one for uncompleteItem()
   }
   uncompleteItem(id, key){
-    //let val = this.completed$[id];
     this.data.push(id);
     this.deleteCompletedItem(key);
   }

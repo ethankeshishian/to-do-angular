@@ -12,14 +12,14 @@ export class ItemsComponent implements OnInit{
   completeItem(id, key){
     this.service.completeItem(id, key);
   }
+  deleteItem(id){
+    this.service.deleteItem(id);
+  }
   addItem(){
     this.service.addItem(this.newItem);
     this.newItem = "";
   }
-  deleteItem(id){
-    this.service.deleteItem(id);
-  }
-  
+
   constructor(private service:ItemsService) {
     this.listItems = this.service.getItems();
    }
