@@ -20,10 +20,9 @@ export class ItemsService {
   constructor(db: AngularFireDatabase) {
     this.data = db.list('List');
     this.completed = db.list('Completed');
-    this.data.snapshotChanges().pipe(map(changes => console.log(changes)))
-
-    this.data$ = this.data.snapshotChanges().pipe(map((changes:any) => changes.map(c => ({ key: c.payload.key, val: c.payload.val()}))))
-    this.completed$ = this.completed.snapshotChanges().pipe(map((changes:any) => changes.map(c => ({ key: c.payload.key, val: c.payload.val()}))))
+    this.data.snapshotChanges().pipe(map(changes => console.log(changes)));
+    this.data$ = this.data.snapshotChanges().pipe(map((changes:any) => changes.map(c => ({ key: c.payload.key, val: c.payload.val()}))));
+    this.completed$ = this.completed.snapshotChanges().pipe(map((changes:any) => changes.map(c => ({ key: c.payload.key, val: c.payload.val()}))));
   }
   getItems(){
     return this.data$;
@@ -32,18 +31,16 @@ export class ItemsService {
     return this.completed$;
   }
   deleteItem(id){
-    //this.data.splice(id, 1);
     this.data.remove(id);
   }
   deleteCompletedItem(id){
-    //this.completed.splice(id, 1);
     this.completed.remove(id);
   }
   addItem(id:string){
     this.data.push(id);
   }
   completeItem(id, key){
-    this.completed.push(id);//unshift
+    this.completed.push(id);//was unshift
     this.deleteItem(key);
     //this.marked.splice(this.marked.indexOf(id), 1), similar one for uncompleteItem()
   }

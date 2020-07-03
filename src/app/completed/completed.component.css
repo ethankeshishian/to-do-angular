@@ -1,11 +1,8 @@
-#completedItem {
-
-}
-.completedItems {
+.completed-items {
   list-style: none;
   padding:0;
 }
-.Block {
+.block {
   width: 25%;
   margin-left: 25%;
   padding: 20px;
@@ -41,6 +38,12 @@ tr:hover .delete{
   fill:grey;
   color:grey;
 }
+
+.delete{
+  cursor:pointer;
+ /* display: table-cell;
+  white-space: nowrap; */
+}
 /* Handles each list element */
 /* .markItem{
   display: table-cell;
@@ -50,12 +53,6 @@ tr:hover .delete{
   display: table-cell;
   width: 100%;
 } */
-.delete{
- /* display: table-cell;
-  white-space: nowrap; */
-  cursor:pointer;
-}
-
 /* #clear{
   float:right;
 } */

@@ -3,14 +3,13 @@
   padding:0;
   padding-left: 1%;
 }
-.Block{
+.block{
   width: 25%;
   float: left;
   padding:20px;
 }
 h2 {
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  /* text-align: center; */
 }
 tr:hover {
   background-color: #DCDCDC;
@@ -20,6 +19,7 @@ tr:hover .delete{
 }
 .delete{
   opacity:0;
+  cursor:pointer;
 }
 .delete:hover .delete1,
 .delete:active .delete1{
@@ -29,10 +29,13 @@ tr:hover .delete{
 .delete:active .delete2{
   display:inline;
 }
-
 .delete2{
   display:none;
 }
+/* .delete{
+  /* display: table-cell;
+  white-space: nowrap;
+  }*/
 /* Handles each list element */
 /* .markItem{
   display: table-cell;
@@ -43,12 +46,6 @@ tr:hover .delete{
   width: 100%;
   white-space: nowrap;
 }  */
-.delete{
-  /* display: table-cell;
-  white-space: nowrap; */
-  cursor:pointer;
-}
-
 /* .addTask{
   align-items:
 } */

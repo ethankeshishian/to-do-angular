@@ -9,6 +9,9 @@ import { ItemsService } from '../items.service';
 export class ItemsComponent implements OnInit{
   listItems;
   newItem;
+  constructor(private service:ItemsService) {
+    this.listItems = this.service.getItems();
+   }
   completeItem(id, key){
     this.service.completeItem(id, key);
   }
@@ -20,10 +23,6 @@ export class ItemsComponent implements OnInit{
     this.newItem = "";
   }
 
-  constructor(private service:ItemsService) {
-    this.listItems = this.service.getItems();
-   }
   ngOnInit(): void {
   }
-
 }
