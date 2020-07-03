@@ -1,5 +1,5 @@
 #completedItem {
-  text-decoration: line-through;
+
 }
 .completedItems {
   list-style: none;
@@ -23,7 +23,12 @@ tr:hover .delete{
 .delete{
   opacity:0;
 }
-
+.content{
+  text-decoration: line-through;
+  text-decoration-color:grey;
+  fill:grey;
+  color:grey;
+}
 /* Handles each list element */
 /* .markItem{
   display: table-cell;
