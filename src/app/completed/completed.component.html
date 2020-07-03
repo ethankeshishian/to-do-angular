@@ -5,7 +5,7 @@
     <li id="completedItem" *ngFor="let item of completedItems | async, let i = index">
 <table width="100%">
   <tr>
-    <td>
+    <td width="5%">
       <input class ="markItem" type="checkbox" name="completed {{item}}" (click)='uncompleteItem(item.val, item.key)' checked>
     </td>
     <td width="100%">
