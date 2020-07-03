@@ -23,6 +23,18 @@ tr:hover .delete{
 .delete{
   opacity:0;
 }
+.delete:hover .delete1,
+.delete:active .delete1{
+  display:none;
+}
+.delete:hover .delete2,
+.delete:active .delete2{
+  display:inline;
+}
+
+.delete2{
+  display:none;
+}
 .content{
   text-decoration: line-through;
   text-decoration-color:grey;
