@@ -9,7 +9,9 @@
             <input class ="markItem" type="checkbox" name = "Item {{item}}" (click)='completeItem(item.val, item.key)'>
           </td>
           <td width="100%">
-            <span class="content">{{item.val}}</span>
+            <span class="content">
+              <div contenteditable="true" class="contentBox" type="text" name="contentBox">{{item.val}}</div>
+            </span>
           </td>
           <td>
             <div class="delete" (click)="deleteItem(item.key)">
