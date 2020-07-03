@@ -33,9 +33,9 @@ tr:hover .delete{
   display:none;
 }
 /* .delete{
-  /* display: table-cell;
+  display: table-cell;
   white-space: nowrap;
-  }*/
+} */
 /* Handles each list element */
 /* .markItem{
   display: table-cell;
