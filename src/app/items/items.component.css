@@ -41,6 +41,10 @@ tr:hover .delete{
   display: table-cell;
   white-space: nowrap;
 } */
+.content{
+  max-width: 100%;
+  word-break: break-word;
+}
 /* .content{
   display: table-cell;
   width: 100%;

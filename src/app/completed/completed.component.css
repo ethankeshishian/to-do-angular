@@ -37,6 +37,8 @@ tr:hover .delete{
   text-decoration-color:grey;
   fill:grey;
   color:grey;
+  max-width: 100%;
+  word-break: break-word;
 }
 
 .delete{
