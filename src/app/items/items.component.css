@@ -63,9 +63,11 @@ tr:hover .delete{
 .mark-item2{
   display:none;
 }
-
-
-
+.mark-item{
+  display:block;
+  margin:auto;
+  width:75%;
+}
 /* .markItem{
   width: 1em;
   height: 1em;
