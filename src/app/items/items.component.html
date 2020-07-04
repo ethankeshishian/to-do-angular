@@ -5,7 +5,7 @@
     <li *ngFor="let item of listItems | async, let i = index">
       <table width="100%">
         <tr>
-          <td width="5%">
+          <td class="left-cell" width="5%">
             <input class ="markItem" type="checkbox" name = "Item {{item}}" (click)='completeItem(item.val, item.key)'>
           </td>
           <td width="100%">
@@ -14,7 +14,7 @@
               <div contenteditable="true" class="content" type="text" name="content" [textContent]="item.val" #search (keydown.enter)="search.blur()" (focusout)="updateItem(item.val, $event.target.textContent, item.key)">{{item.val}}</div>
             </span>
           </td>
-          <td>
+          <td class="right-cell">
             <div class="delete" (click)="deleteItem(item.key)">
               <span class="delete1">
                 <svg width="1.25em" height="1.25em" viewBox="0 0 20 20" class="bi bi-x-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <!-- Original value was 1em width/height, and 0 0 16 16 -->

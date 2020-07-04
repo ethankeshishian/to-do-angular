@@ -11,8 +11,22 @@ h2 {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   /* text-align: center; */
 }
-tr:hover {
+tr:hover td{
   background-color: #DCDCDC;
+}
+tr:hover .left-cell{
+  background-color: #DCDCDC;
+  -moz-border-radius: 20px 0 0 20px;
+  -webkit-border-radius: 20px 0 0 20px;
+  -khtml-border-radius: 20px 0 0 20px;
+  border-radius: 20px 0 0 20px;
+}
+tr:hover .right-cell{
+  background-color: #DCDCDC;
+  -moz-border-radius: 0 20px 20px 0;
+  -webkit-border-radius: 0 20px 20px 0;
+  -khtml-border-radius: 0 20px 20px 0;
+  border-radius: 0 20px 20px 0;
 }
 tr:hover .delete{
   opacity:1;
@@ -41,7 +55,21 @@ tr:hover .delete{
   word-break: break-word;
   outline: 0px solid transparent;
 }
-
+.markItem{
+  width: 1em;
+  height: 1em;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #000;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  display: block;
+}
+.markItem:checked {
+    background-color: gray;
+}
 /* .delete{
   cursor:pointer;
   display: table-cell;
