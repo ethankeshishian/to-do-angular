@@ -26,6 +26,7 @@ export class ItemsComponent implements OnInit{
     this.service.updateItem(id, key);
   }
   checkChanges(prevItem, newItem, ItemID){
+    //event.preventDefault(); //unnecessary
     if (prevItem == newItem){
       return;
     }
