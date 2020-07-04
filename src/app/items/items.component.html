@@ -10,7 +10,8 @@
           </td>
           <td width="100%">
             <span class="content">
-              <div contenteditable="true" class="contentBox" type="text" name="contentBox">{{item.val}}</div>
+              <!-- <div contenteditable="true" class="contentBox" type="text" name="contentBox" [textContent]="item.val" (input)="item.val=$event.target.textContent">{{item.val}}</div> -->
+              <div contenteditable="true" class="contentBox" type="text" name="contentBox" [textContent]="item.val" (keydown.enter)="checkChanges(item.val, $event.target.textContent, item.key)" (focusout)="checkChanges(item.val, $event.target.textContent, item.key)">{{item.val}}</div>
             </span>
           </td>
           <td>
@@ -38,7 +39,7 @@
     </li>
   </ul>
   <div class="addTask">
-    <input type="text" name="Add" placeholder="Add a task..." [(ngModel)]="newItem"(keydown.enter)="addItem()">
+    <input type="text" name="Add" placeholder="Add a task..." [(ngModel)]="newItem" (keydown.enter)="addItem()">
     <button type="add" name="button" (click)="addItem()" >Add</button>
   </div>
 </div>

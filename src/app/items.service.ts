@@ -30,23 +30,30 @@ export class ItemsService {
   getCompleted(){
     return this.completed$;
   }
-  deleteItem(id){
-    this.data.remove(id);
+  deleteItem(key){
+    this.data.remove(key);
   }
-  deleteCompletedItem(id){
-    this.completed.remove(id);
+  deleteCompletedItem(key){
+    this.completed.remove(key);
   }
-  addItem(id:string){
-    this.data.push(id);
+  addItem(val:string){
+    this.data.push(val);
   }
-  completeItem(id, key){
-    this.completed.push(id);//was unshift
+  completeItem(val, key){
+    this.completed.push(val);//was unshift
     this.deleteItem(key);
     //this.marked.splice(this.marked.indexOf(id), 1), similar one for uncompleteItem()
   }
-  uncompleteItem(id, key){
-    this.data.push(id);
+  uncompleteItem(val, key){
+    this.data.push(val);
     this.deleteCompletedItem(key);
+  }
+  updateItem(key, val){
+    console.log("before db call key: " + key + " val: " + val);
+    this.data.set(key, val);
+  }
+  updateCompletedItem(key, val){
+    this.completed.set(key,val);
   }
   clearAll(){
     this.completed.remove();
