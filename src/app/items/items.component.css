@@ -71,7 +71,7 @@ tr:hover .delete{
 }
 .text-box{
   width:80%;
-  height:30px;
+  height:40px;
   border-radius: 20px;
   border: 1px solid #555555;
   text-indent:3px;
@@ -79,7 +79,7 @@ tr:hover .delete{
 }
 .add{
   width:20%;
-  height:30px;
+  height:40px;
   border-radius: 20px;
   border: 1px solid #555555;
   outline: 0px solid transparent;
