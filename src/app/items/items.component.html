@@ -11,7 +11,7 @@
           <td width="100%">
             <span class="content">
               <!-- <div contenteditable="true" class="contentBox" type="text" name="contentBox" [textContent]="item.val" (input)="item.val=$event.target.textContent">{{item.val}}</div> -->
-              <div contenteditable="true" class="contentBox" type="text" name="contentBox" [textContent]="item.val" #search (keydown.enter)="search.blur()" (focusout)="checkChanges(item.val, $event.target.textContent, item.key)">{{item.val}}</div>
+              <div contenteditable="true" class="content" type="text" name="content" [textContent]="item.val" #search (keydown.enter)="search.blur()" (focusout)="updateItem(item.val, $event.target.textContent, item.key)">{{item.val}}</div>
             </span>
           </td>
           <td>

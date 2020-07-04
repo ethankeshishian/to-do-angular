@@ -19,6 +19,7 @@ tr:hover .delete{
 }
 .delete{
   opacity:0;
+  cursor: pointer;
 }
 .delete:hover .delete1,
 .delete:active .delete1{
@@ -28,7 +29,6 @@ tr:hover .delete{
 .delete:active .delete2{
   display:inline;
 }
-
 .delete2{
   display:none;
 }
@@ -41,11 +41,11 @@ tr:hover .delete{
   word-break: break-word;
 }
 
-.delete{
+/* .delete{
   cursor:pointer;
- /* display: table-cell;
-  white-space: nowrap; */
-}
+  display: table-cell;
+  white-space: nowrap;
+} */
 /* Handles each list element */
 /* .markItem{
   display: table-cell;

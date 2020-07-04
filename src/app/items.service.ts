@@ -49,10 +49,11 @@ export class ItemsService {
     this.deleteCompletedItem(key);
   }
   updateItem(key, val){
-    console.log("before db call key: " + key + " val: " + val);
+    console.log("updating item!");
     this.data.set(key, val);
   }
   updateCompletedItem(key, val){
+    console.log("updating completed item!");
     this.completed.set(key,val);
   }
   clearAll(){

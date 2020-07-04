@@ -22,10 +22,7 @@ export class ItemsComponent implements OnInit{
     this.service.addItem(this.newItem);
     this.newItem = "";
   }
-  updateItem(id, key){
-    this.service.updateItem(id, key);
-  }
-  checkChanges(prevItem, newItem, ItemID){
+  updateItem(prevItem, newItem, ItemID){
     //event.preventDefault(); //unnecessary
     if (prevItem == newItem){
       return;

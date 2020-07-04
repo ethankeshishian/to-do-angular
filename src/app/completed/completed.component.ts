@@ -20,6 +20,13 @@ export class CompletedComponent implements OnInit {
   clearAll(){
     this.service.clearAll();
   }
+  updateItem(prevItem, newItem, ItemID){
+    //event.preventDefault(); //unnecessary
+    if (prevItem == newItem){
+      return;
+    }
+    this.service.updateCompletedItem(ItemID, newItem);
+  }
 
   ngOnInit(): void {
   }
