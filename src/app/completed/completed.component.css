@@ -39,6 +39,7 @@ tr:hover .delete{
   color:grey;
   max-width: 100%;
   word-break: break-word;
+  outline: 0px solid transparent;
 }
 
 /* .delete{

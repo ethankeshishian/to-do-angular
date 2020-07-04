@@ -32,6 +32,9 @@ tr:hover .delete{
 .delete2{
   display:none;
 }
+.content{
+  outline: 0px solid transparent;
+}
 /* .delete{
   display: table-cell;
   white-space: nowrap;
