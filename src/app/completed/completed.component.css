@@ -74,6 +74,13 @@ tr:hover .delete{
   margin:auto;
   width:75%;
 }
+.clear{
+  width:20%;
+  height:30px;
+  border-radius: 20px;
+  border: 1px solid #555555;
+  outline: 0px solid transparent;
+}
 /* .mark-item{
   width: 1em;
   height: 1em;

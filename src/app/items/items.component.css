@@ -68,6 +68,21 @@ tr:hover .delete{
   margin:auto;
   width:75%;
 }
+.text-box{
+  width:80%;
+  height:30px;
+  border-radius: 20px;
+  border: 1px solid #555555;
+  text-indent:3px;
+  outline: 0px solid transparent;
+}
+.add{
+  width:20%;
+  height:30px;
+  border-radius: 20px;
+  border: 1px solid #555555;
+  outline: 0px solid transparent;
+}
 /* .markItem{
   width: 1em;
   height: 1em;
