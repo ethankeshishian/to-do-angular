@@ -55,7 +55,21 @@ tr:hover .delete{
   word-break: break-word;
   outline: 0px solid transparent;
 }
-.markItem{
+.mark-item:hover{
+  cursor:pointer;
+}
+.mark-item:hover .mark-item1,
+.mark-item:active .mark-item1{
+  display:none;
+}
+.mark-item:hover .mark-item2,
+.mark-item:active .mark-item2{
+  display:inline;
+}
+.mark-item2{
+  display:none;
+}
+/* .mark-item{
   width: 1em;
   height: 1em;
   background-color: white;
@@ -67,9 +81,9 @@ tr:hover .delete{
   cursor: pointer;
   display: block;
 }
-.markItem:checked {
+.mark-item:checked {
     background-color: gray;
-}
+} */
 /* .delete{
   cursor:pointer;
   display: table-cell;
