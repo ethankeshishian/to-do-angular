@@ -5,6 +5,7 @@
 }
 .block{
   width: 25%;
+  min-width:300px;
   float: left;
   padding:20px;
 }
