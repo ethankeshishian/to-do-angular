@@ -22,6 +22,15 @@ export class ItemsComponent implements OnInit{
     this.service.addItem(this.newItem);
     this.newItem = "";
   }
+  updateItem(id, key){
+    this.service.updateItem(id, key);
+  }
+  checkChanges(prevItem, newItem, ItemID){
+    if (prevItem == newItem){
+      return;
+    }
+    this.service.updateItem(ItemID, newItem);
+  }
 
   ngOnInit(): void {
   }
