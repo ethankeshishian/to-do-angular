@@ -84,7 +84,9 @@ tr:hover .delete{
   width:75%;
 }
 .clear{
+  position: relative;
   width:20%;
+  min-width: 70px;
   height:40px;
   border-radius: 20px;
   border: 1px solid #555555;

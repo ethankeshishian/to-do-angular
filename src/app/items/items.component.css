@@ -76,8 +76,12 @@ tr:hover .delete{
   margin:auto;
   width:75%;
 }
+.add-task{
+  display:flex;
+  flex-direction: row;
+}
 .text-box{
-  width:80%;
+  width: 80%;
   height:40px;
   border-radius: 20px;
   border: 1px solid #555555;
@@ -85,6 +89,7 @@ tr:hover .delete{
   outline: 0px solid transparent;
 }
 .add{
+  min-width:70px;
   width:20%;
   height:40px;
   border-radius: 20px;
