@@ -8,6 +8,8 @@
   min-width:300px;
   float: left;
   padding:20px;
+  display:flex;
+  flex-direction: column;
 }
 h2 {
   font-family: Roboto, "Helvetica Neue", sans-serif;
