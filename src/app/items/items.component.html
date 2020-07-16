@@ -25,10 +25,10 @@
             <!-- <input class ="markItem" type="checkbox" name = "Item {{item}}" (click)='completeItem(item.val, item.key)'> -->
           </td>
           <td width="100%">
-            <span class="content">
+            <!-- <span class="content"> -->
               <!-- <div contenteditable="true" class="contentBox" type="text" name="contentBox" [textContent]="item.val" (input)="item.val=$event.target.textContent">{{item.val}}</div> -->
               <div contenteditable="true" class="content" type="text" name="content" [textContent]="item.val" #search (keydown.enter)="search.blur()" (focusout)="updateItem(item.val, $event.target.textContent, item.key)">{{item.val}}</div>
-            </span>
+            <!-- </span> -->
           </td>
           <td class="right-cell">
             <div class="delete" (click)="deleteItem(item.key)">

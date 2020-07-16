@@ -60,9 +60,10 @@ tr:hover .delete{
   text-decoration-color:grey;
   fill:grey;
   color:grey;
-  max-width: 100%;
+  /* max-width: 100%; */
   word-break: break-word;
   outline: 0px solid transparent;
+  padding-left: 10px;
 }
 .mark-item:hover{
   cursor:pointer;

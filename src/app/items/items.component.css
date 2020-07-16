@@ -57,6 +57,9 @@ tr:hover .delete{
 }
 .content{
   outline: 0px solid transparent;
+  word-break: break-word;
+  outline: 0px solid transparent;
+  padding-left: 8px;
 }
 .mark-item:hover{
   cursor:pointer;
