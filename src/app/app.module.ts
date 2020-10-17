@@ -12,6 +12,7 @@ import { ButtonsComponent } from './buttons/buttons.component';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { ReversePipe } from './reverse.pipe';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     AppComponent,
     ItemsComponent,
     CompletedComponent,
-    ButtonsComponent
+    ButtonsComponent,
+    ReversePipe
   ],
   imports: [
     BrowserModule,

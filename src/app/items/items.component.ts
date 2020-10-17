@@ -4,32 +4,27 @@ import { ItemsService } from '../items.service';
 @Component({
   selector: 'items',
   templateUrl: './items.component.html',
-  styleUrls: ['./items.component.css']
+  styleUrls: ['./items.component.css'],
 })
-export class ItemsComponent implements OnInit{
+export class ItemsComponent implements OnInit {
   listItems;
   newItem;
-  constructor(private service:ItemsService) {
+  constructor(private service: ItemsService) {
     this.listItems = this.service.getItems();
-   }
-  completeItem(id, key){
+  }
+  completeItem(id, key) {
     this.service.completeItem(id, key);
   }
-  deleteItem(id){
+  deleteItem(id) {
     this.service.deleteItem(id);
   }
-  addItem(){
-    this.service.addItem(this.newItem);
-    this.newItem = "";
-  }
-  updateItem(prevItem, newItem, ItemID){
+  updateItem(prevItem, newItem, ItemID) {
     //event.preventDefault(); //unnecessary
-    if (prevItem == newItem){
+    if (prevItem == newItem) {
       return;
     }
     this.service.updateItem(ItemID, newItem);
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 }

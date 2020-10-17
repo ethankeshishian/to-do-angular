@@ -1,0 +1,35 @@
+.buttons {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+.add-task {
+  /* display: flex;
+  flex-direction: row; */
+  width: 90%;
+}
+.text-box {
+  width: 80%;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #555555;
+  text-indent: 3%;
+  outline: 0px solid transparent;
+}
+.add {
+  min-width: 70px;
+  width: 20%;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #555555;
+  outline: 0px solid transparent;
+}
+.clear {
+  /* position: relative; */
+  width: 10%;
+  min-width: 70px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #555555;
+  outline: 0px solid transparent;
+}

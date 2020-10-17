@@ -1,106 +1,106 @@
-.items{
+.items {
   list-style: none;
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
 }
-.block{
-  width: 25%;
-  min-width:300px;
-  float: left;
-  padding:20px;
-  display:flex;
+.block {
+  /* width: 25%;
+  min-width:300px; */
+  /* float: left; */
+  padding: 0px 20px 0px 20px;
+  display: flex;
   flex-direction: column;
 }
 h2 {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-tr:hover td{
-  background-color: #DCDCDC;
+tr:hover td {
+  background-color: #dcdcdc;
 }
-tr:hover .left-cell{
-  background-color: #DCDCDC;
+tr:hover .left-cell {
+  background-color: #dcdcdc;
   -moz-border-radius: 20px 0 0 20px;
   -webkit-border-radius: 20px 0 0 20px;
   -khtml-border-radius: 20px 0 0 20px;
   border-radius: 20px 0 0 20px;
 }
-tr:hover .right-cell{
-  background-color: #DCDCDC;
+tr:hover .right-cell {
+  background-color: #dcdcdc;
   -moz-border-radius: 0 20px 20px 0;
   -webkit-border-radius: 0 20px 20px 0;
   -khtml-border-radius: 0 20px 20px 0;
   border-radius: 0 20px 20px 0;
 }
-tr:hover .delete{
-  opacity:1;
+tr:hover .delete {
+  opacity: 1;
 }
-.delete{
-  opacity:0;
-  cursor:pointer;
+.delete {
+  opacity: 0;
+  cursor: pointer;
 }
 .delete:hover .delete1,
-.delete:active .delete1{
-  opacity:0;
+.delete:active .delete1 {
+  opacity: 0;
 }
 .delete:hover .delete2,
-.delete:active .delete2{
-  opacity:1;
+.delete:active .delete2 {
+  opacity: 1;
 }
-.delete1{
-  transition: opacity .15s linear;
-  opacity:1;
-  position:absolute;
+.delete1 {
+  transition: opacity 0.15s linear;
+  opacity: 1;
+  position: absolute;
 }
-.delete2{
-  opacity:0;
-  transition: opacity .15s linear;
+.delete2 {
+  opacity: 0;
+  transition: opacity 0.15s linear;
 }
-.content{
+.content {
   outline: 0px solid transparent;
   word-break: break-word;
   outline: 0px solid transparent;
-  padding-left: 8px;
+  /* padding-left: 8px; */
 }
-.mark-item:hover{
-  cursor:pointer;
+.mark-item:hover {
+  cursor: pointer;
 }
 .mark-item:hover .mark-item2,
-.mark-item:active .mark-item2{
+.mark-item:active .mark-item2 {
   opacity: 1;
 }
-.mark-item2{
+.mark-item2 {
   opacity: 0;
-  transition: opacity .15s linear;
+  transition: opacity 0.15s linear;
 }
-.mark-item1{
+.mark-item1 {
   position: absolute;
   opacity: 1;
 }
-.mark-item{
-  display:block; 
-  margin:auto;
-  width:75%;
+.mark-item {
+  display: block;
+  margin: auto;
+  width: 75%;
 }
-.add-task{
-  display:flex;
+/* .add-task {
+  display: flex;
   flex-direction: row;
 }
-.text-box{
+.text-box {
   width: 80%;
-  height:40px;
+  height: 40px;
   border-radius: 20px;
   border: 1px solid #555555;
-  text-indent:3px;
+  text-indent: 3px;
   outline: 0px solid transparent;
 }
-.add{
-  min-width:70px;
-  width:20%;
-  height:40px;
+.add {
+  min-width: 70px;
+  width: 20%;
+  height: 40px;
   border-radius: 20px;
   border: 1px solid #555555;
   outline: 0px solid transparent;
-}
+} */
 /* .markItem{
   width: 1em;
   height: 1em;

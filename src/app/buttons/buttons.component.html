@@ -1,3 +1,13 @@
-<!-- <button type="complete" name="button" (click)="completeItem()">Complete</button> -->
-<!-- <button type="delete" name="button" (click)="deleteItem()">Delete</button> -->
-<!-- <button type="edit" name="button" (click)="editItem()">Edit</button> -->
+<div class="buttons">
+  <div class="add-task">
+    <input
+      class="text-box"
+      name="Add"
+      placeholder="Add a task..."
+      [(ngModel)]="newItem"
+      (keydown.enter)="addItem()"
+    />
+    <button class="add" name="button" (click)="addItem()">Add</button>
+  </div>
+  <button class="clear" name="button" (click)="clearAll()">Clear</button>
+</div>

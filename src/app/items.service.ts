@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
 // import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ItemsService {
   data;
@@ -20,44 +20,57 @@ export class ItemsService {
   constructor(db: AngularFireDatabase) {
     this.data = db.list('List');
     this.completed = db.list('Completed');
-    this.data.snapshotChanges().pipe(map(changes => console.log(changes)));
-    this.data$ = this.data.snapshotChanges().pipe(map((changes:any) => changes.map(c => ({ key: c.payload.key, val: c.payload.val()}))));
-    this.completed$ = this.completed.snapshotChanges().pipe(map((changes:any) => changes.map(c => ({ key: c.payload.key, val: c.payload.val()}))));
+    this.data.snapshotChanges().pipe(map((changes) => console.log(changes)));
+    this.data$ = this.data
+      .snapshotChanges()
+      .pipe(
+        map((changes: any) =>
+          changes.map((c) => ({ key: c.payload.key, val: c.payload.val() }))
+        )
+      );
+    this.completed$ = this.completed
+      .snapshotChanges()
+      .pipe(
+        map((changes: any) =>
+          changes.map((c) => ({ key: c.payload.key, val: c.payload.val() }))
+        )
+      );
   }
-  getItems(){
+  getItems() {
     return this.data$;
   }
-  getCompleted(){
+  getCompleted() {
     return this.completed$;
   }
-  deleteItem(key){
+  deleteItem(key) {
     this.data.remove(key);
   }
-  deleteCompletedItem(key){
+  deleteCompletedItem(key) {
     this.completed.remove(key);
   }
-  addItem(val:string){
+  addItem(val: string) {
     this.data.push(val);
   }
-  completeItem(val, key){
-    this.completed.push(val);//was unshift
+  completeItem(val, key) {
+    this.completed.push(val); //was unshift
     this.deleteItem(key);
     //this.marked.splice(this.marked.indexOf(id), 1), similar one for uncompleteItem()
   }
-  uncompleteItem(val, key){
+  uncompleteItem(val, key) {
     this.data.push(val);
     this.deleteCompletedItem(key);
   }
-  updateItem(key, val){
-    console.log("updating item!");
+  updateItem(key, val) {
+    console.log('updating item!');
     this.data.set(key, val);
   }
-  updateCompletedItem(key, val){
-    console.log("updating completed item!");
-    this.completed.set(key,val);
+  updateCompletedItem(key, val) {
+    console.log('updating completed item!');
+    this.completed.set(key, val);
   }
-  clearAll(){
+  clearAll() {
     this.completed.remove();
+    this.data.remove();
   }
   // Future features
   // editItem(id:string, change:string){
